@@ -1,0 +1,14 @@
+inp = int(input())
+digit = 3 - (int(inp)%3)
+l = len(str(inp))
+if digit == 3:
+   print(inp)
+else:
+   Min=int(str(digit) + str(inp))
+   for i in range(l):
+       n = str(inp)
+       if digit <= int(n[i]):
+           n = n[:l-i] + str(digit) + n[l-i:]
+           if int(n) < Min:
+               Min = int(n)
+   print(Min)
